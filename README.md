@@ -1,5 +1,5 @@
 
-a kever plugin, generate traceid and mount it to context.
+a kever global plugin, generate traceid and mount it to context.
 
 
 
