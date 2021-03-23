@@ -1,7 +1,13 @@
-# traceId
-kever 插件 生成traceId 挂载到context上
 
-## 使用方式
+a kever plugin, generate traceid and mount it to context.
+
+
+
+## Install
+
+> npm install @kever/traceid --save
+
+## Start
 
 ```ts
 //index.ts
@@ -19,7 +25,6 @@ createApp({
 // tsconfig.json
 {
   "compilerOptions": {
-    // 添加
     "types": [
       "@kever/traceid"
     ],
