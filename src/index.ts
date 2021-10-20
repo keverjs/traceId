@@ -10,8 +10,8 @@ declare module '@kever/core' {
 
 let increasId = 1000
 
-@Plugin('traceId', PluginType.global)
-export class TraceId implements BasePlugin {
+@Plugin('traceId', PluginType.Global)
+export class TraceId implements BasePlugin<PluginType.Global> {
   async ready(ctx: Context, next: Next) {
     ctx.traceId = ctx.traceId ? ctx.traceId : this.createTraceId()
     await next()

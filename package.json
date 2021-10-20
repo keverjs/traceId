@@ -25,5 +25,9 @@
   "homepage": "https://github.com/keverjs/traceId#readme",
   "devDependencies": {
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@kever/core": "*",
+    "@kever/ioc": "*"
   }
 }
