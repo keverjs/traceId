@@ -1,5 +1,5 @@
 import { Context, Next } from '@kever/core'
-import { BasePlugin, PluginType, Plugin } from '@kever/ioc'
+import { BaseMiddleware, Type, Middleware } from '@kever/ioc'
 import os from 'os'
 
 declare module '@kever/core' {
@@ -10,8 +10,8 @@ declare module '@kever/core' {
 
 let increasId = 1000
 
-@Plugin('traceId', PluginType.Global)
-export class TraceId implements BasePlugin<PluginType.Global> {
+@Middleware('traceId', Type.Global)
+export class TraceId implements BaseMiddleware<Type.Global> {
   async ready(ctx: Context, next: Next) {
     ctx.traceId = ctx.traceId ? ctx.traceId : this.createTraceId()
     await next()
