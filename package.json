@@ -1,6 +1,6 @@
 {
   "name": "@kever/traceid",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "kever 插件 生成traceId 挂载到context上",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
