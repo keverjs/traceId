@@ -1,5 +1,5 @@
 import { Context, Next } from '@kever/core'
-import { BaseMiddleware, Type, Middleware } from '@kever/ioc'
+import { BaseMiddleware, MType, Middleware } from '@kever/ioc'
 import os from 'os'
 
 declare module '@kever/core' {
@@ -10,8 +10,8 @@ declare module '@kever/core' {
 
 let increasId = 1000
 
-@Middleware('traceId', Type.Global)
-export class TraceId implements BaseMiddleware<Type.Global> {
+@Middleware('traceId', MType.Global)
+export class TraceId implements BaseMiddleware<MType.Global> {
   async ready(ctx: Context, next: Next) {
     ctx.traceId = ctx.traceId ? ctx.traceId : this.createTraceId()
     await next()
