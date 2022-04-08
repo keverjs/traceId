@@ -1,8 +1,7 @@
-import { Context, Next } from '@kever/core'
-import { BaseMiddleware, MType, Middleware } from '@kever/ioc'
+import { Context, Next, BaseMiddleware, MType, Middleware } from 'kever'
 import os from 'os'
 
-declare module '@kever/core' {
+declare module 'kever' {
   interface Context {
     traceId: string;
   }
